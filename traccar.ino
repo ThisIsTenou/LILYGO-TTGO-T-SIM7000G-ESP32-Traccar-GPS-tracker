@@ -210,7 +210,7 @@ void loop() {
       while ((battery > 0) and (count < 90)) {
         battery = ReadBattery();
         delay(10000);
-        count += 10;
+        count++;
       }
     }
   }
