@@ -203,7 +203,12 @@ void loop() {
     if (battery == 0) {
       delay(10000);
     } else {
-      delay(900000);
+      int count = 0;
+      while ((battery > 0) and (count < 90)) {
+        battery = ReadBattery();
+        delay(10000);
+        count += 10;
+      }
     }
   }
 }
