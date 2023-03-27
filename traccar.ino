@@ -116,7 +116,7 @@ void send_data(float lat, float lon, float speed, float alt, float accuracy, flo
     FINALBAT = "";
     FINALIGNITION = "true";
   } else {
-    float batterylevel = (((float)battery - 3.6) / 0.6) * 100;
+    float batterylevel = (((float)battery - 3) / 1.2) * 100;
     FINALBAT = String(battery, 2);
     if (batterylevel > 100) {
       batterylevel = 100;
